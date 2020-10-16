@@ -93,7 +93,11 @@ function keyDownHandler(event) {
 // This is a (bad) way of stopping the player. It causes a stutter, and must be fixed
 // But it is fine for now.
 // Maybe add an else to the keyhandler switch, so when they arent pressed, it is instant,
-/*/ And not a seperate check.
+// And not a seperate check.
+
+//todo
+//Depracated
+
 function keyUpHandler(event) {
   var keyPressed = String.fromCharCode(event.keyCode);
 
@@ -105,7 +109,7 @@ function keyUpHandler(event) {
   }
 
 }
-*/
+
 
 //------------
 //Game Loop
