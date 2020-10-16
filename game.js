@@ -60,6 +60,7 @@ function preloading() {
 function keyDownHandler(event) {
   var keyPressed = String.fromCharCode(event.keyCode);
 
+  
   switch (keyPressed) {
     case "W":
       facing = "N";
@@ -86,6 +87,7 @@ function keyDownHandler(event) {
       //isRunning = false;
       break;
   }
+  
 }
 
 // This is a (bad) way of stopping the player. It causes a stutter, and must be fixed
