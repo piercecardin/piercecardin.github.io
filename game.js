@@ -61,21 +61,21 @@ function preloading() {
 //------------
 function keyDownHandler(event) {
     keyPressed = String.fromCharCode(event.keyCode);
-    if (keyPressed == moveKeys) {
-        isMoving = true;
-    }
-    for (key = 0; key < 4; key++) {
-        if (key == "W") {
-            facing = "N";
-        } else if (key == "D") {
-            facing = "E";
-        } else if (key == "S") {
-            facing = "S";
-        } else if (key == "A") {
-            facing = "W";
-        }
 
+    if (keyPressed == "W") {
+        isMoving = true;
+        facing = "N";
+    } else if (keyPressed == "D") {
+        isMoving = true;
+        facing = "E";
+    } else if (keyPressed == "S") {
+        isMoving = true;
+        facing = "S";
+    } else if (keyPressed == "A") {
+        isMoving = true;
+        facing = "W";
     }
+
     /* Depracated
     //This is meant only for facing vars.
     switch (keyPressed) {
@@ -119,15 +119,36 @@ function keyUpHandler(event) {
 function keyUpHandler(event) {
     keyReleased = String.fromCharCode(event.keyCode);
 
-    if ((keyReleased == "W") || (keyReleased == "A") ||
-        (keyReleased == "S") || (keyReleased == "D")) {
-        if ((keyPressed != "W") ||
-            (keyPressed != "A") ||
-            (keyPressed != "S") ||
-            (keyPressed != "D")) {
+    if (keyReleased == "W") {
+        if (keyPressed != "W" ||
+            keyPressed != "A" ||
+            keyPressed != "S" ||
+            keyPressed != "D") {
             isMoving = false;
-        } else {
-            //nothing
+        }
+    }
+    if (keyReleased == "A") {
+        if (keyPressed != "W" ||
+            keyPressed != "A" ||
+            keyPressed != "S" ||
+            keyPressed != "D") {
+            isMoving = false;
+        }
+    }
+    if (keyReleased == "S") {
+        if (keyPressed != "W" ||
+            keyPressed != "A" ||
+            keyPressed != "S" ||
+            keyPressed != "D") {
+            isMoving = false;
+        }
+    }
+    if (keyReleased == "D") {
+        if (keyPressed != "W" ||
+            keyPressed != "A" ||
+            keyPressed != "S" ||
+            keyPressed != "D") {
+            isMoving = false;
         }
     }
 }
