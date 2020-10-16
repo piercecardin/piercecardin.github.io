@@ -36,6 +36,7 @@ var gameloop, sX, sY,
     runCost, runReplenish,
     level, exp, upCost,
     spawnRate, maxEnemies, enemySpeed,
+    counter,
     eX, eY,
     moveKeys;
 
@@ -82,6 +83,7 @@ function preloading() {
         enemySpeed = 4;
         eX = 100;
         eY = 100;
+        couner = 60;
 
         gameloop = setInterval(update, TIME_PER_FRAME);
         document.addEventListener("keydown", keyPressedHandler);
@@ -143,8 +145,16 @@ function update() {
     ctx.fillStyle = "lightGrey";
 
     //ai
-    eX += Math.cos(eX + charX) * enemySpeed;
-    eY += Math.sin(eY + charY) * enemySpeed;
+    var run = charX - eX;
+        var rise = charY - eY; //use this in place of e for a classed 
+        var length = Math.sqrt((rise*rise) + (run*run));
+        var unitX = run / length;
+        var unitY = rise / length;
+
+        eX += unitX * (enemySpeed);
+        eY += unitY * (enemySpeed);
+    
+
     // Animation handler
     //movement
     if (north == true) {
