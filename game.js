@@ -30,15 +30,15 @@ var preloader = setInterval(preloading, TIME_PER_FRAME);
 
 var gameloop, facing, sX, sY, charX, charY, isMoving, isRunning,
     mHp, hp, mSp, sp,
-    runCost, runReplenish;
-
+    runCost, runReplenish,
+    keyPressed, keyReleased;
 
 function preloading() {
   if (charImage.ready) {
     clearInterval(preloader);
 
     //Initialise game
-    facing = "S"; //N = North, E = East, S = South, W = Wes
+    facing = "S"; //N = North, E = East, S = South, W = West
     isMoving = false;
     isRunning = false;
     mHp = 100;
@@ -58,8 +58,7 @@ function preloading() {
 //Key Handlers
 //------------
 function keyDownHandler(event) {
-  var keyPressed = String.fromCharCode(event.keyCode);
-
+  keyPressed = String.fromCharCode(event.keyCode);
   
   switch (keyPressed) {
     case "W":
@@ -87,17 +86,14 @@ function keyDownHandler(event) {
       //isRunning = false;
       break;
   }
-  
 }
 
 // This is a (bad) way of stopping the player. It causes a stutter, and must be fixed
 // But it is fine for now.
 // Maybe add an else to the keyhandler switch, so when they arent pressed, it is instant,
 // And not a seperate check.
-
-//todo
 //Depracated
-
+/*
 function keyUpHandler(event) {
   var keyPressed = String.fromCharCode(event.keyCode);
 
@@ -109,7 +105,19 @@ function keyUpHandler(event) {
   }
 
 }
+*/
 
+// New
+function keyUpHandler(event) {
+  keyReleased = String.fromCharCode(event.keyCode);
+
+  if ((keyReleased == "W") || (keyReleased == "A") ||
+      (keyReleased == "S") || (keyReleased == "D")) {
+    if(!keyPressed){
+      isMoving = false;
+    }
+  }
+}
 
 //------------
 //Game Loop
