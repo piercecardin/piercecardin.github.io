@@ -75,47 +75,8 @@ function keyDownHandler(event) {
         isMoving = true;
         facing = "W";
     }
-
-    /* Depracated
-    //This is meant only for facing vars.
-    switch (keyPressed) {
-        case "W":
-            facing = "N";
-            break;
-        case "D":
-            facing = "E";
-            break;
-        case "S":
-            facing = "S";
-            break;
-        case "A":
-            facing = "W";
-            break;
-        default:
-            facing = "S";
-            isMoving = false;
-            //isRunning = false;
-            break;
-    }
-    */
 }
 
-//Depracated
-/*
-function keyUpHandler(event) {
-  var keyPressed = String.fromCharCode(event.keyCode);
-
-  if ((keyPressed == "W") || (keyPressed == "A") ||
-      (keyPressed == "S") || (keyPressed == "D")) {
-    isMoving = false;
-  } else if (keyPressed == "SHIFT") {
-    isRunning = false;
-  }
-
-}
-*/
-
-// New
 function keyUpHandler(event) {
     keyReleased = String.fromCharCode(event.keyCode);
 
@@ -172,7 +133,7 @@ function update() {
 
         // Sets the animation marker for image based on player
         // Direction, and also moves the player based on this.
-        // This also handles running
+        // This also handles running (not yet)
         //todo Un-constantify speed
         switch (facing) {
             case "N":
