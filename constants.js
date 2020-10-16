@@ -18,9 +18,9 @@ var CHAR_WIDTH = 16, //For spritesheet calculation
     IMAGE_START_NORTH_Y = 0, //All of these denote places in the sprite system
     IMAGE_START_EAST_Y = 16,
     IMAGE_START_SOUTH_Y = 32,
-    IMAGE_START_WEST_Y = 48,	
+    IMAGE_START_WEST_Y = 48,
     SHEET_WIDTH = 64; //full sheet size
 
-var TEXT_PRELOADING = "Loading ...", 
-    TEXT_PRELOADING_X = 200, 
+var TEXT_PRELOADING = "Loading ...",
+    TEXT_PRELOADING_X = 200,
     TEXT_PRELOADING_Y = 200;

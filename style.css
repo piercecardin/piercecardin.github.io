@@ -1,180 +1,184 @@
 /* Normal Classes */
+
 body {
-    background-color: lightgray;
-  }
-  
-  p {
-    color: black;
-  }
-  
-  h1 {
-    font-weight: bold;
-    font-size: 45px;
-  }
-  
-  h2 {
-    font-weight: bold;
-    color: white;
-  }
-  /* special text header things */
-  .header {
-    font-weight: bold;
-    color: white;
-  }
-  
-  /* All images have a border */
-  img {
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    border-radius: 12px;
-    border-spacing: 24px;
-  }
-  
-  /* Centering */
-  .titleCentered {
-    text-align: center;
-  }
-  
-  .imgCentered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
-  }
-  
-  /* 370 for centering skills, 755 for a perfect */
-  /* WARNING!!! USE ONLY FOR SKILLS*/
-  .listCentered {
-    margin-left: auto;
-    margin-right: auto;
-    width: 755px;
-  }
-  .blockCentered {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .textCentered {
-    /* CENTER */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    border-radius: 12px;
-    border-spacing: 24px;
-  
-    /* TEXT */
-    text-align: center;
-    padding: 10px;
-    width: 75%;
-    list-style-type: none;
-  }
-  .gameCentered {
-    /* CENTER */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    border-radius: 12px;
-    border-spacing: 24px;
-  
-    /* TEXT */
-    text-align: center;
-    padding: 10px;
-  }
-  
-  
-  
-  /* Skilllist Elements */
-  .skillList {
-    display: block;
-    float: left;
-    padding: 10px;
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    border-radius: 12px;
-    border-spacing: 24px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 325px;
-  }
-  
-  .skillListTitle {
-    /* CENTER */
-    margin: -10px;
-    display: block;
-    padding: 10px;
-    width: 315px;
-  
-    /* BORDER */
-    border-style: solid;
-    border-color: black;
-    border-width: 5px;
-    border-radius: 1px;
-    border-spacing: 24px;
-  
-    /* TEXT */
-    background: black;
-    text-align: center;
-  }
-  
-  .skillText {
-    margin-top: 30px
-  }
-  
-  /* Menu */
-  .menuBar {
-    list-style-type: none;
-    margin: -8px;
-    padding: 0px;
-    overflow: hidden;
-    width: full;
-    background-color: black;
-  }
-  
-  .menuItem {
-    float: left;
-    display: block;
-    color: white;
-    padding: 14px 18px;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  .menuItem:hover {
-    background-color: #555;
-    color: white;
-  }
-  
-  .active {
-    float: left;
-    display: block;
-    color: black;
-    padding: 14px 18px;
-    text-decoration: none;
-    text-align: center;
-    background-color: deepskyblue;
-  }
-  
-  /* Contact Form */
-  .contactForm {
-    display: block;
-    align-content: center;
-    text-align: center;
-    border-style: solid;
-    border-width: 5px;
-    border-radius: 12px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-  }
+  background-color: lightgray;
+}
+
+p {
+  color: black;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 45px;
+}
+
+h2 {
+  font-weight: bold;
+  color: white;
+}
+
+/* special text header things */
+
+.header {
+  font-weight: bold;
+  color: white;
+}
+
+/* All images have a border */
+
+img {
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 12px;
+  border-spacing: 24px;
+}
+
+/* Centering */
+
+.titleCentered {
+  text-align: center;
+}
+
+.imgCentered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+/* 370 for centering skills, 755 for a perfect */
+
+/* WARNING!!! USE ONLY FOR SKILLS*/
+
+.listCentered {
+  margin-left: auto;
+  margin-right: auto;
+  width: 755px;
+}
+
+.blockCentered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.textCentered {
+  /* CENTER */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 12px;
+  border-spacing: 24px;
+  /* TEXT */
+  text-align: center;
+  padding: 10px;
+  width: 75%;
+  list-style-type: none;
+}
+
+.gameCentered {
+  /* CENTER */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 12px;
+  border-spacing: 24px;
+  /* TEXT */
+  text-align: center;
+  padding: 10px;
+}
+
+/* Skilllist Elements */
+
+.skillList {
+  display: block;
+  float: left;
+  padding: 10px;
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 12px;
+  border-spacing: 24px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 325px;
+}
+
+.skillListTitle {
+  /* CENTER */
+  margin: -10px;
+  display: block;
+  padding: 10px;
+  width: 315px;
+  /* BORDER */
+  border-style: solid;
+  border-color: black;
+  border-width: 5px;
+  border-radius: 1px;
+  border-spacing: 24px;
+  /* TEXT */
+  background: black;
+  text-align: center;
+}
+
+.skillText {
+  margin-top: 30px
+}
+
+/* Menu */
+
+.menuBar {
+  list-style-type: none;
+  margin: -8px;
+  padding: 0px;
+  overflow: hidden;
+  width: full;
+  background-color: black;
+}
+
+.menuItem {
+  float: left;
+  display: block;
+  color: white;
+  padding: 14px 18px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.menuItem:hover {
+  background-color: #555;
+  color: white;
+}
+
+.active {
+  float: left;
+  display: block;
+  color: black;
+  padding: 14px 18px;
+  text-decoration: none;
+  text-align: center;
+  background-color: deepskyblue;
+}
+
+/* Contact Form */
+
+.contactForm {
+  display: block;
+  align-content: center;
+  text-align: center;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
