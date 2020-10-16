@@ -146,15 +146,15 @@ function update() {
 
     //ai
     var run = charX - eX;
-        var rise = charY - eY; //use this in place of e for a classed 
-        var length = Math.sqrt((rise*rise) + (run*run));
-        var unitX = run / length;
-        var unitY = rise / length;
+    var rise = charY - eY; //use this in place of e for a classed 
+    var length = Math.sqrt((rise*rise) + (run*run));
+    var unitX = run / length;
+    var unitY = rise / length;
 
-        eX += unitX * (enemySpeed);
-        eY += unitY * (enemySpeed);
+    eX += unitX * (enemySpeed);
+    eY += unitY * (enemySpeed);
     
-
+    //ADD ARRAYS FOR MULTIPLE ENEMIES
     // Animation handler
     //movement
     if (north == true) {
