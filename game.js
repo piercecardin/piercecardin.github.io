@@ -113,7 +113,7 @@ function keyUpHandler(event) {
 
   if ((keyReleased == "W") || (keyReleased == "A") ||
       (keyReleased == "S") || (keyReleased == "D")) {
-    if(!keyPressed){
+    if((keyPressed != "")){
       isMoving = false;
     }
   }
