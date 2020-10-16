@@ -53,9 +53,9 @@ function preloading() {
         isRunning = false;
         isMoving = false;
         south,
-        north,
-        west,
-        east = false;
+            north,
+            west,
+            east = false;
 
         //Stats
         mHp = 100;
@@ -67,7 +67,7 @@ function preloading() {
         //Also stats, but used to calculate other stuff
         runCost = 0.5;
         runReplenish = 1.0;
-        
+
         //Morre calc stats, used to calc the calc stats
         level = 1;
         exp = 0;
@@ -109,7 +109,7 @@ function keyPressedHandler(event) {
     if (keyPressed == "D") {
         east = true;
     }
-    if (keyPressed == ["W", "A", "S", "D"]){
+    if (keyPressed == ["W", "A", "S", "D"]) {
         isMoving = true;
     }
 }
@@ -144,16 +144,25 @@ function update() {
     ctx.fillRect(0, 0, stage.width, stage.height);
     ctx.fillStyle = "lightGrey";
 
+    //Floor subpixels
+    eX = Math.floor(eX);
+    eY = Math.floor(eY);
+
+
+
     //ai
     var run = charX - eX;
     var rise = charY - eY; //use this in place of e for a classed 
-    var length = Math.sqrt((rise*rise) + (run*run));
+    var length = Math.sqrt((rise * rise) + (run * run));
     var unitX = run / length;
     var unitY = rise / length;
 
-    eX += unitX * (enemySpeed);
-    eY += unitY * (enemySpeed);
-    
+    if (length <= 64) {
+
+        eX += unitX * (enemySpeed);
+        eY += unitY * (enemySpeed);
+    }
+
     //ADD ARRAYS FOR MULTIPLE ENEMIES
     // Animation handler
     //movement
@@ -209,7 +218,7 @@ function update() {
     //Draw Player
     ctx.drawImage(charImage, sX, sY, CHAR_WIDTH, CHAR_HEIGHT,
         charX, charY, CHAR_WIDTH, CHAR_HEIGHT);
-    
+
     //Draw Enemies
     ctx.drawImage(charImage, 1, 1, CHAR_WIDTH, CHAR_HEIGHT,
         eX, eY, CHAR_WIDTH, CHAR_HEIGHT);
